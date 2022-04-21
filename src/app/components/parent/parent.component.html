@@ -1,0 +1,51 @@
+<!-- Success or error message on submit -->
+<div *ngIf="message" [ngClass]="{ message: true, valid: form.valid }">
+  {{ message }}
+</div>
+
+<!-- form -->
+<form [formGroup]="form" (submit)="onSubmit()">
+  <label for="parent-input">Parent Input</label>
+  <input
+    id="parent-input"
+    name="parent-input"
+    formControlName="parent-input"
+    placeholder="parent.component.html"
+  />
+
+  <!-- Middle Component (contains Child Component) -->
+  <my-middle></my-middle>
+
+  <button type="submit">Submit Form</button>
+</form>
+
+<!-- 
+DOM:
+
+<my-parent>
+
+  <form>
+    <input>
+
+    <my-middle>
+      <input>
+
+      <my-child>
+        <input>
+      </my-child>
+
+    </my-middle>
+
+    <button></button>
+
+  </form>
+
+</my-parent>
+-->
+
+<!-- Used for debugging -->
+<p>FormGroup value:</p>
+
+<div class="json">
+  {{ form.value | json }}
+</div>

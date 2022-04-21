@@ -1,1 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+$orangered: #ffb599;
+$lightskyblue: #9fd8fb;
+$thistle: #ceafce;
+
+body {
+  font-family: Roboto, 'Helvetica Neue', 'Open Sans', sans-serif;
+  line-height: 1.65;
+}
+
+label {
+  display: block;
+}
+
+input {
+  display: block;
+  min-height: 40px;
+  min-width: calc(100% - 10px);
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+input::placeholder {
+  color: #d3d3d3;
+}
+
+body {
+  font-family: Roboto, 'Helvetica Neue', 'Open Sans', sans-serif;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0 0 5px;
+}
+
+a,
+a:visited {
+  color: rgb(0, 0, 238);
+}
+a:hover {
+  color: darken(rgb(0, 0, 238), 10);
+}
+a:hover {
+  color: darken(rgb(0, 0, 238), 10);
+}
+a:focus-within {
+  color: darken(rgb(0, 0, 238), 20);
+}
+a:active {
+  color: darken(rgb(0, 0, 238), 15);
+}
+
+button {
+  margin: 5px 0 15px;
+  padding: 5px;
+  cursor: pointer;
+  background: $thistle;
+  color: black;
+}
+button:hover {
+  background: darken($thistle, 10);
+}
+button:hover {
+  background: darken($thistle, 10);
+}
+button:focus-within {
+  background: darken($thistle, 20);
+}
+button:active {
+  background: darken($thistle, 15);
+}
+
+.json {
+  white-space: pre-line;
+  border: 2px solid black;
+  border-radius: 2px;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.post {
+  /* Blue */
+  background: $lightskyblue;
+}
+
+.user {
+  /* Orange */
+  background: $orangered;
+}
+
+.comments {
+  /* Purple */
+  background: $thistle;
+}
